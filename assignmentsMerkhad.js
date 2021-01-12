@@ -165,6 +165,7 @@ const inventoryCheck = (iteme) => {
         }
 
     }
+    console.log(isInIventory); 
 }
 inventoryCheck("suger");
 
