@@ -59,16 +59,16 @@ console.log("--------Exercise-------");
 // Count Occurrences.
 // Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
 
-const countOccurrences=(strg,char)=>{
-    let j=0;
-let strToCharr=strg.split("");
-for (let i=0;i< strToCharr.length;i++)
-if(strToCharr[i]==char){
-j++
+const countOccurrences = (strg, char) => {
+    let j = 0;
+    let strToCharr = strg.split("");
+    for (let i = 0; i < strToCharr.length; i++)
+        if (strToCharr[i] == char) {
+            j++
+        }
+    console.log(j);
 }
-console.log(j);
-}
-countOccurrences("a string and a letter","t");
+countOccurrences("a string and a letter", "t");
 
 
 
@@ -81,7 +81,7 @@ TT
 TTT
 TTTT*/
 let text = ("");
-for (let i = 1; i <=4; i++) {
+for (let i = 1; i <= 4; i++) {
 
     text += "T";
 
@@ -92,14 +92,22 @@ for (let i = 1; i <=4; i++) {
 
 
 //Second shape
-let text2="";
-let j;
-if (j=0&&j<=4){
-    j++;
-    text2+="*";
-};
-   
+const drawFunc = (numberOfStars) => {
+    for (let i = 0; i < numberOfStars; i++) {
+        let text="";
+
+        for (let j = numberOfStars; j > i; j--) {
+            text += "*"
+        }
+        console.log(text);
+      
+
+    }
+}
+drawFunc(4);
+
  
+
 
 
 /*
@@ -107,57 +115,67 @@ if (j=0&&j<=4){
 ****
 ***
 **
-*
-Third shape
+**/
+
+/*Third shape
 1
 12
 123
 1234
 12345*/
-let textNum="";
-for (let i=1;i<6;i++){
-    textNum+=i+"";
-console.log(textNum);
-    }
-   
-    /*  Finish the following function so it outputs looks like this:
+let textNum = "";
+for (let i = 1; i < 6; i++) {
+    textNum += i + "";
+    console.log(textNum);
+}
+
+/*  Finish the following function so it outputs looks like this:
 1
 12
 123
 1234
 12345*/
-const numbersCount = (num1,num3) => {
+
+const numbersCount = () => {
+  
     for (let i = 0; i <= 5; i++) {
-      num1+=i+"";
-      for (let j = 1; j <= i; j++) {
-            num3+=j+"";      }
-       console.log(num3)
+         tempVar="";
+        for (let j = 1; j <= i; j++) {
+            tempVar += j + "";
+        }
+        console.log(tempVar);
+        
 
     }
-  };
-  numbersCount(0,0);
+};
+numbersCount();
 
-  /* create a function should that checks if a store contains a specific product in it's inventory.
+/* create a function should that checks if a store contains a specific product in it's inventory.
 for example:
 let storeArr= ["milk", "eggs", "cheese", "butter"];
-// try includes might help :)
-// Examples
-inventoryCheck("cheese") returns true
-inventoryCheck( "ham") returns false 
-*/
-//let text = longStr.includes("Is"
-let tetxIncludes= ["milk", "eggs", "cheese", "butter"]
-  const inventoryCheck=(iteme)=>{
-    
-    for(let i=0;i<tetxIncludes.length;i++){
-        if (i==iteme){
-            console.log(true);
+// try includes might help :)*/
+
+
+const inventoryCheck = (iteme) => {
+    let tetxIncludes = ["milk", "salat", "caffe", "breat"]
+    let isInIventory=false;
+    for (let i = 0; i < tetxIncludes.length; i++) {
+        if (tetxIncludes[i] == iteme) {
+          isInIventory=true;
         }
-        else{
-          
-        }  console.log(false);
+
     }
-    
-  }
- inventoryCheck("butter");
+}
+inventoryCheck("suger");
+
+console.log("--------Exercise-------");
+// Extra work :)
+// create a repo for this app. we are coming later to it :)
+// Create a program that generate a random password with the length of 30 character, every time you call the function should give you a different password
+
+// Examples you will have other passwords for sure
+
+// passwordGen()  ➞ Y3mI9x7bvPY86T?oM§hIbgh!MLwA77N
+// passwordGen()  ➞ Oy$tkBGoo5fg§mO4AdV&Kh8XXZR4d7K
+// passwordGen()  ➞ v0ZwDrn@hfI€kOKWH§k6kqub6zfpuyP
 
