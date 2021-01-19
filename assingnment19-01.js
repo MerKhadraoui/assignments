@@ -59,7 +59,7 @@ const dictionary = (str, arrDic) => {
   result = [];
   let userInput = str.toLowerCase();
   for (let i = 0; i < arrDic.length; i++) {
-    let userData = arrDic[i];
+    let userData = arrDic[i].toLowerCase();
     if (userData.includes(userInput)) {
       result.push(userData);
     }
@@ -67,7 +67,7 @@ const dictionary = (str, arrDic) => {
   return result;
 };
 console.log(dictionary("bu", ["button", "breakfast", "border"]));
-// another way
+// i tried in another way but did not work
 // const dictionary = (str, arrDic) => {
 //   result = [];
 //   let userInput = str.toLowerCase();
