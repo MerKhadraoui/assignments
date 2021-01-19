@@ -179,4 +179,13 @@ console.log("--------Exercise-------");
 // passwordGen()  ➞ Y3mI9x7bvPY86T?oM§hIbgh!MLwA77N
 // passwordGen()  ➞ Oy$tkBGoo5fg§mO4AdV&Kh8XXZR4d7K
 // passwordGen()  ➞ v0ZwDrn@hfI€kOKWH§k6kqub6zfpuyP
+function generatePassword() {
+    var length = 8,
+        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+        retVal = "";
+    for (var i = 0, n = charset.length; i < length; ++i) {
+        retVal += charset.charAt(Math.floor(Math.random() * n));
+    } 
+    return retVal;
+}
 
